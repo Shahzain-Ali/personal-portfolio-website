@@ -13,6 +13,7 @@ body {
   margin: 0;  /* Remove default margin */
   background-color: rgb(15, 14, 14);  /* Set dark background color */
   font-family: sans-serif;  /* Set font */
+  overflow-x: hidden;
 }
 
 

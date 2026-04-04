@@ -13,8 +13,8 @@ const Header = () => {
       <nav className=" text-[13px] tracking-[0.5px]   py-2 flex justify-between text-white  items-center">
       <SideNavbar/>
         <Link href="#home-sec" className="text-[2rem]">
-          <li className="list-none bg-gradient-to-r from-[#FA6E00] to-[#E60026] text-transparent bg-clip-text">
-            LOgo
+          <li className="list-none bg-gradient-to-r from-[#FA6E00] to-[#E60026] text-transparent bg-clip-text text-[1.5rem] font-bold">
+            Shahzain Ali
           </li>
         </Link>
         <ul className="flex gap-6 custom1:gap-0 text-gray-300 customsm:hidden smm:hidden text-[1.2rem] custom1:text-[1.1rem] ">
@@ -34,7 +34,7 @@ const Header = () => {
           <Link href="#contact-sec">
             <li className="hover:bg-gray-700 hover:text-gray-50 rounded-md inline-block px-2 py-[0.2em]">Contact me</li>
           </Link>
-          <Link href="#">
+          <Link href="#portfolio-sec">
             <li className="list-none hover:bg-gray-700 hover:text-gray-50 rounded-md inline-block px-2 py-[0.2em]">Portfolio</li>
           </Link>
         </ul>

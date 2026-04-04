@@ -26,28 +26,25 @@ const About = () => {
               I&apos;m Shahzain Ali, an AI Automation Developer from Pakistan. While
               most developers build apps, I build digital employees — autonomous
               AI agents that think, plan, and execute business tasks 24/7.
-              I&apos;ve delivered AI solutions for 2 paid clients, including a
-              Full-Time Equivalent AI Employee with 7 MCP servers and 31 tools
-              that manages Gmail, WhatsApp, social media, and accounting — saving
-              businesses 20+ hours weekly. I also built AutoInvoice AI, an agentic
-              pipeline that generates and delivers PDF invoices in seconds, and a
-              RAG-powered chatbot for a Physical AI course book with 500+ students.
-              I specialize in Python, OpenAI Agent SDK, MCP Servers, n8n, and
-              FastAPI. I also build modern web applications with Next.js, TypeScript,
-              and Tailwind CSS. My mission is to replace repetitive business work
-              with intelligent systems that run autonomously — making AI automation
-              accessible for companies of every size. I share my learnings on
-              YouTube at @SolutionsWithShahzain.
+              I&apos;ve helped clients automate their business operations and
+              built production-grade AI systems from scratch — autonomous digital
+              employees, invoice automation pipelines, and intelligent chatbots
+              — saving businesses 20+ hours of manual work every week. My systems
+              handle Gmail, WhatsApp, accounting, and content publishing — all
+              running on autopilot with human approval when it matters. I specialize in Python, OpenAI Agent SDK, MCP
+              Servers, n8n, FastAPI, and Next.js. Whether you need a custom AI
+              agent, a workflow automation, or an intelligent chatbot — I build
+              systems that work while you sleep.
             </p>
           <div className="sm:block ">
             {/* Mobile Screen Text */}
             <p className="text-gray-300 text-justify text-sm  md:hidden smm:hidden customsm:block ">
               I&apos;m Shahzain Ali, an AI Automation Developer from Pakistan.
-              I build digital employees — autonomous AI agents that think,
-              plan, and execute business tasks 24/7. I specialize in Python,
-              OpenAI Agent SDK, MCP Servers, n8n, FastAPI, Next.js, and
-              Tailwind CSS. My mission is to replace repetitive work with
-              intelligent systems that run autonomously.
+              I build digital employees — autonomous AI agents that handle
+              business tasks 24/7. I&apos;ve helped clients and built production-grade
+              AI systems from scratch, saving businesses 20+ hours weekly.
+              Whether you need an AI agent, workflow automation, or chatbot
+              — I build systems that work while you sleep.
             </p>
             </div>
 

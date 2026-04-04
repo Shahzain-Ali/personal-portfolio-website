@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { FaLinkedin, FaGithub, FaYoutube, FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -34,30 +35,30 @@ const Footer = () => {
         </ul>
         </nav>
         <div className="text-[1.6rem] text-gray-300  mx-auto   w-[60%] smm:w-[90%] customsm:w-[100%]">
-        <ul className="flex gap-4 my-3 mx-auto  w-[40%] justify-evenly">
-          <li className="border border-gray-500 cursor-pointer hover:shadow-primary hover:text-gray-50 rounded-3xl inline-block w-6 h-6 leading-6 text-center text-xs text-gray-300 ">
+        <ul className="flex gap-4 my-3 mx-auto justify-center">
+          <li className="border border-gray-500 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 flex items-center justify-center flex-shrink-0">
             <Link href="https://www.linkedin.com/in/shahzain-ali-518b862ba" target="_blank">
-              <span className="fab fa-linkedin"></span>
+              <FaLinkedin className="text-[#0A66C2]" size={18} />
             </Link>
           </li>
-          <li className="border border-gray-500 cursor-pointer hover:shadow-primary hover:text-gray-50 inline-block rounded-2xl w-6 h-6 leading-6 text-center text-xs text-gray-300 ">
+          <li className="border border-gray-500 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 flex items-center justify-center flex-shrink-0">
             <Link href="https://github.com/Shahzain-Ali/" target="_blank">
-              <span className="fab fa-github"></span>
+              <FaGithub className="text-white" size={18} />
             </Link>
           </li>
-          <li className="border border-gray-500 cursor-pointer hover:shadow-primary hover:text-gray-50 inline-block rounded-2xl w-6 h-6 leading-6 text-center text-xs text-gray-300 ">
+          <li className="border border-gray-500 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 flex items-center justify-center flex-shrink-0">
             <Link href="">
-              <span className="fab fa-facebook"></span>
+              <FaFacebook className="text-[#1877F2]" size={18} />
             </Link>
           </li>
-          <li className="border border-gray-500 cursor-pointer hover:shadow-primary hover:text-gray-50 inline-block rounded-2xl w-6 h-6 leading-6 text-center text-xs text-gray-300 ">
+          <li className="border border-gray-500 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 flex items-center justify-center flex-shrink-0">
             <Link href="">
-              <span className="fab fa-instagram"></span>
+              <FaInstagram className="text-[#E4405F]" size={18} />
             </Link>
           </li>
-          <li className="border border-gray-500 cursor-pointer hover:shadow-primary hover:text-gray-50 inline-block rounded-2xl w-6 h-6 leading-6 text-center text-xs text-gray-300 ">
+          <li className="border border-gray-500 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 flex items-center justify-center flex-shrink-0">
             <Link href="https://www.youtube.com/@SolutionswithShahzain" target="_blank">
-              <span className="fab fa-youtube"></span>
+              <FaYoutube className="text-[#FF0000]" size={18} />
             </Link>
           </li>
         </ul>

@@ -9,7 +9,7 @@
 
 body {
   color: var(--foreground);  /* Set text color */
-  height: 100vh;  /* Set body height to 100% of the viewport */
+  min-height: 100vh;  /* Minimum height, allows content to grow */
   margin: 0;  /* Remove default margin */
   background-color: rgb(15, 14, 14);  /* Set dark background color */
   font-family: sans-serif;  /* Set font */

@@ -18,6 +18,7 @@ const projects = [
       "API Integration",
     ],
     github: "https://github.com/Shahzain-Ali/ai-employee-fte-system",
+    live: "#",
   },
   {
     title: "AutoInvoice AI",
@@ -34,6 +35,7 @@ const projects = [
       "pdfkit",
     ],
     github: "https://github.com/Shahzain-Ali/agentic-invoice-generator",
+    live: "#",
   },
   {
     title: "Agentic Todo Evolution",
@@ -51,6 +53,7 @@ const projects = [
       "ChatKit",
     ],
     github: "https://github.com/Shahzain-Ali/agentic-todo-evolution",
+    live: "#",
   },
   {
     title: "FurniStore E-Commerce",
@@ -66,6 +69,7 @@ const projects = [
       "next-intl",
     ],
     github: "https://github.com/Shahzain-Ali/furnistore-ecommerce-nextjs",
+    live: "#",
   },
   {
     title: "Physical AI Course Book",
@@ -88,11 +92,11 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <div className="pt-10 pb-10 customsm:px-2 smm:px-2" id="portfolio-sec">
-      <h1 className="mx-auto my-0 text-gray-300 text-center w-20 border-b border-[#FD6F00]">
+    <div className="pt-10 pb-10 customsm:px-2 smm:px-2 overflow-x-hidden" id="portfolio-sec">
+      <h1 className="mx-auto my-0 text-gray-300 text-center w-16 smm:w-20 sm:w-20 md:w-24 lg:w-24 border-b border-[#FD6F00] text-lg smm:text-xl sm:text-xl md:text-2xl lg:text-2xl">
         Portfolio
       </h1>
-      <section className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-[90%] md:w-[85%] mx-auto">
+      <section className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-[90%] md:w-[85%] mx-auto">
         {projects.map((project, index) => (
           <div
             key={index}

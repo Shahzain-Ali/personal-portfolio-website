@@ -11,12 +11,11 @@ export default {
       screens:{
         customsm: { min: '200px', max: '480px' },
         smm:{min:'480px', max: '640px' },
-        custom2:"830px",
-        custom1:{min:'640px',max:'830px'},
         sm: { min: '640px', max: '768px' },
-        md: { min: '768px', max: '1280px' },
-        lg: {min:  '1024px', max:  '1280'},
-        xl: '1280px','2xl': '1536px',
+        md: { min: '768px', max: '1024px' },
+        lg: {min:  '1024px', max:  '1280px'},
+        xl: {min: '1280px', max: '1536px'},
+        '2xl': '1536px',
         },
       boxShadow:{
          primary: "0px 0px 5px gray",

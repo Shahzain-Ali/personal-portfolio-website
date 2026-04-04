@@ -95,9 +95,9 @@ export default function Home() {
         {/* ############### Buttons Hire Me and Download CV   #################### */}
 
         <div className="flex my-6 gap-3 customsm:justify-center smm:justify-center md:justify-start sm:my-8 customsm:mt-10">
-          <button className="inline-block text-white text-[0.8rem] w-[5rem] h-[1.7rem] bg-[#E46400] rounded-md hover:bg-[#c9492c]">
+          <Link href="#contact-sec" className="inline-block text-white text-[0.8rem] w-[5rem] h-[1.7rem] bg-[#E46400] rounded-md hover:bg-[#c9492c] text-center leading-[1.7rem]">
             Hire Me
-          </button>
+          </Link>
 
           <button className="inline-block border border-gray-300 hover:bg-[#363637] hover:text-gray-50 text-[0.8rem] text-gray-300 w-[6.5rem] h-[1.7rem] rounded-md">
             Download CV

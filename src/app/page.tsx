@@ -85,13 +85,13 @@ export default function Home() {
         {/* ############### Buttons Hire Me and Download CV   #################### */}
 
         <div className="flex my-6 gap-3 customsm:justify-center smm:justify-center md:justify-start sm:my-4 sm:justify-center customsm:mt-10">
-          <Link href="#contact-sec" className="inline-block text-white text-[0.8rem] sm:text-[0.95rem] w-[5rem] sm:w-[6rem] h-[1.7rem] sm:h-[2.1rem] bg-[#E46400] rounded-md hover:bg-[#c9492c] text-center leading-[1.7rem] sm:leading-[2.1rem]">
-            Hire Me
+          <Link href="#contact-sec" className="inline-block text-white text-[0.8rem] sm:text-[0.95rem] w-[5.5rem] sm:w-[6.5rem] h-[1.7rem] sm:h-[2.1rem] bg-[#E46400] rounded-md hover:bg-[#c9492c] text-center leading-[1.7rem] sm:leading-[2.1rem]">
+            Work With Me
           </Link>
 
-          <button className="inline-block border border-gray-300 hover:bg-[#363637] hover:text-gray-50 text-[0.8rem] sm:text-[0.95rem] text-gray-300 w-[6.5rem] sm:w-[7.5rem] h-[1.7rem] sm:h-[2.1rem] rounded-md">
+          <a href="/Shahzain-Ali-Resume.pdf" download className="inline-block border border-gray-300 hover:bg-[#363637] hover:text-gray-50 text-[0.8rem] sm:text-[0.95rem] text-gray-300 w-[6.5rem] sm:w-[7.5rem] h-[1.7rem] sm:h-[2.1rem] rounded-md text-center leading-[1.7rem] sm:leading-[2.1rem]">
             Download CV
-          </button>
+          </a>
         </div>
         <section className="grid grid-cols-4 gap-x-6 gap-y-3 mt-4 customsm:mx-auto customsm:w-auto customsm:gap-x-4 customsm:gap-y-2 customsm:pt-3 smm:mx-auto md:mx-0 sm:mx-auto shadow-secondary rounded-md w-full max-w-[450px] p-4 border">
           {/* Row 1: Python, OpenAI, MCP, Streamlit */}

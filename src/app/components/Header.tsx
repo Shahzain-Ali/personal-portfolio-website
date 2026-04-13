@@ -38,8 +38,8 @@ const Header = () => {
             <li className="list-none hover:bg-gray-700 hover:text-gray-50 rounded-md inline-block px-2 py-[0.2em]">Portfolio</li>
           </Link>
         </ul>
-        <Link href="#contact-sec" className="customsm:block inline-block text-[0.8rem] w-[5rem] h-[1.7rem] bg-[#E46400] rounded-md hover:bg-[#c9492c] text-center leading-[1.7rem]">
-          Hire Me
+        <Link href="#contact-sec" className="customsm:block text-gray-50 inline-block text-[0.8rem] w-[5.9rem] h-[1.7rem] bg-[#E46400] rounded-md hover:bg-[#c9492c] text-center leading-[1.7rem]">
+          Work With Me
         </Link>
       </nav>
 

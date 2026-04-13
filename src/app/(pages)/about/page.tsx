@@ -37,14 +37,14 @@ const About = () => {
             </p>
 
             {/* Download CV Button */}
-            <button className="mt-4 bg-[#E46400] hover:bg-[#c9492c]
+            <a href="/Shahzain-Ali-Resume.pdf" download className="mt-4 bg-[#E46400] hover:bg-[#c9492c]
               text-gray-200 px-4 py-2 rounded-md
-              items-center justify-center
+              inline-flex items-center justify-center
               text-sm transition duration-300
               hover:text-gray-50">
               <i className="fa-solid fa-download mr-2"></i>
               Download CV
-            </button>
+            </a>
           </div>
         </div>
       </div>

@@ -66,11 +66,11 @@ const Footer = () => {
         <div className='text-gray-300 flex justify-center gap-6 border-b border-gray-300 customsm:w-[340px] w-[360px]  mx-auto pb-5'>
             <div >
                 <span className="fa-solid fa-envelope inline-block mt-1 text-[14px] customsm:text-[12px]"></span>
-                <span className="ml-2 text-[14px] customsm:text-[12px] ">alishahzain604@gmail.com</span>
+                <span className="ml-2 text-[14px] customsm:text-[12px] ">enshahzainali110@gmail.com</span>
             </div>
             <div>
                 <span className="fa-solid fa-phone mr-2 inline-block mt-1 text-[14px] customsm:text-[12px]"></span>
-                <span className="inline-block text-[14px] customsm:text-[12px]">+92 3363005909</span>
+                <span className="inline-block text-[14px] customsm:text-[12px]">+92 3035498918</span>
             </div>
         </div>
         <div className='text-gray-300 w-[50%] smm:text-[11px] text-[12px] mx-auto text-center landscape:pb-4 '>

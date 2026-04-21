@@ -32,7 +32,7 @@ export default function Home() {
       {/* #################### Short Personal Info ################# */}
 
       <div className="customsm:grid customsm:place-items-center  ">
-      <main className="md:w-[100%] lg:w-[100%] min-h-[78vh] customsm:w-[100%] mx-auto md:flex lg:flex sm:w-[100%] customsm:h-[480px] gap-8 md:gap-12 lg:gap-16 sm:flex-col sm:items-center sm:justify-start customsm:text-center">
+      <main className="md:w-[100%] lg:w-[100%] min-h-[78vh] customsm:w-[100%] mx-auto md:flex lg:flex sm:w-[100%] customsm:min-h-[480px] gap-8 md:gap-12 lg:gap-16 sm:flex-col sm:items-center sm:justify-start customsm:text-center">
         <section id="section-1" className="w-[45%] md:w-[42%] lg:w-[48%] xl:w-[45%] sm:w-full custom:w-[50%] customsm:w-auto customsm:justify-center smm:text-center smm:w-auto md:text-left shrink-0 sm:text-center">
         <div className="pt-8 sm:leading-8 leading-[45px] customsm:leading-[50px]  customsm:mx-auto customsm:w-auto smm:mx-auto smm:w-auto ">
           <h3 className="text-[1.8rem] md:text-[2.2rem] lg:text-[2.2rem] smm:text-[25px] customsm:text-[25px] sm:text-[26px] text-gray-400 tracking-[0.8px]">
@@ -192,22 +192,22 @@ export default function Home() {
             alt="Shahzain Ali — AI Automation Developer"
             width={1300}
             height={1200}
-            className="relative z-10 object-contain drop-shadow-2xl w-full h-auto min-w-[300px] md:w-[400px] md:min-w-0 lg:w-[500px] lg:min-w-0 md:-translate-y-12 lg:-translate-y-12"
+            className="relative z-10 object-contain drop-shadow-2xl w-full h-auto min-w-[300px] md:w-[400px] md:min-w-0 lg:w-[500px] lg:min-w-0 md:-translate-y-12 lg:-translate-y-12  rounded-lg"
             priority
           />
         </div>
       </section>
 
       {/* PERSONAL IMAGE - MOBILE (visible below md) */}
-      <section className="w-full md:hidden lg:hidden mt-4 sm:mt-24 smm:mt-24 flex items-center justify-center mb-[420px] sm:mb-[200px] smm:mb-[200px]">
+      <section className="w-full md:hidden lg:hidden mt-4 sm:mt-24 smm:mt-24 flex items-center justify-center mb-10 customsm:mb-[30px] sm:mb-[200px] smm:mb-[200px]">
         <div className="relative flex items-center justify-center sm:w-[280px] smm:w-[280px] sm:h-[300px] smm:h-[300px]">
-          <div className="absolute w-[85%] h-[90%] rounded-full bg-gray-800/60 blur-sm top-[5%] sm:top-[12%] smm:top-[12%] sm:w-[130%] smm:w-[130%] sm:h-[120%] smm:h-[120%]"></div>
+          <div className="absolute w-[85%] h-[90%] rounded-full bg-gray-800/60 blur-sm top-[5%] customsm:top-[18%] customsm:w-[90%] customsm:h-[90%] sm:top-[12%] smm:top-[8%] sm:w-[130%] sm:h-[120%] smm:w-[130%]  smm:h-[120%]"></div>
           <Image
             src="/images/shahzain-no-bg.png"
             alt="Shahzain Ali — AI Automation Developer"
             width={450}
             height={420}
-            className="relative z-10 object-contain drop-shadow-2xl w-full h-full sm:!min-w-[700px] smm:!min-w-[700px] sm:!min-h-[400px] smm:!min-h-[400px]"
+            className="relative z-10 object-contain drop-shadow-2xl w-full h-full smm:!min-w-[380px] smm:!min-h-[340px] sm:!min-w-[460px] sm:!min-h-[420px] rounded-lg"
             priority
           />
         </div>

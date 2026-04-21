@@ -7,6 +7,10 @@
   --foreground: #171717;  /* Text color */
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   color: var(--foreground);  /* Set text color */
   min-height: 100vh;  /* Minimum height, allows content to grow */

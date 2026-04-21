@@ -47,6 +47,11 @@ const Footer = () => {
             </Link>
           </li>
           <li className="border border-gray-500 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 flex items-center justify-center flex-shrink-0">
+            <Link href="https://www.youtube.com/@SolutionswithShahzain" target="_blank">
+              <FaYoutube className="text-[#FF0000]" size={18} />
+            </Link>
+          </li>
+          <li className="border border-gray-500 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 flex items-center justify-center flex-shrink-0">
             <Link href="">
               <FaFacebook className="text-[#1877F2]" size={18} />
             </Link>
@@ -54,11 +59,6 @@ const Footer = () => {
           <li className="border border-gray-500 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 flex items-center justify-center flex-shrink-0">
             <Link href="">
               <FaInstagram className="text-[#E4405F]" size={18} />
-            </Link>
-          </li>
-          <li className="border border-gray-500 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 flex items-center justify-center flex-shrink-0">
-            <Link href="https://www.youtube.com/@SolutionswithShahzain" target="_blank">
-              <FaYoutube className="text-[#FF0000]" size={18} />
             </Link>
           </li>
         </ul>

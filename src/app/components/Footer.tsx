@@ -37,7 +37,7 @@ const Footer = () => {
         <div className="text-[1.6rem] text-gray-300  mx-auto   w-[60%] smm:w-[90%] customsm:w-[100%]">
         <ul className="flex gap-4 my-3 mx-auto justify-center">
           <li className="border border-gray-500 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 flex items-center justify-center flex-shrink-0">
-            <Link href="https://www.linkedin.com/in/shahzain-ali-518b862ba" target="_blank">
+            <Link href="https://www.linkedin.com/in/shahzain-ali1/" target="_blank">
               <FaLinkedin className="text-[#0A66C2]" size={18} />
             </Link>
           </li>

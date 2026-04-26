@@ -65,7 +65,7 @@ export default function Home() {
         {/* #######################  Official websites links #################### */}
 
         <ul className="flex gap-x-4 mt-4 w-auto mx-auto customsm:justify-center md:justify-start smm:justify-center sm:justify-center sm:my-2">
-          <Link href="https://www.linkedin.com/in/shahzain-ali-518b862ba" target="_blank" className="border border-gray-600 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-9 h-9 flex items-center justify-center">
+          <Link href="https://www.linkedin.com/in/shahzain-ali1/" target="_blank" className="border border-gray-600 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-9 h-9 flex items-center justify-center">
             <FaLinkedin className="text-[#0A66C2]" size={20} />
           </Link>
           <Link href="https://github.com/Shahzain-Ali/" target="_blank" className="border border-gray-600 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-9 h-9 flex items-center justify-center">

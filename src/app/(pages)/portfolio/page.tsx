@@ -2,11 +2,40 @@ import React from "react";
 import Link from "next/link";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-const projects = [
+type Project = {
+  title: string;
+  outcome: string;
+  description: string;
+  tech: string[];
+  github: string | null;
+  live: string | null;
+  liveLabel?: string;
+};
+
+const projects: Project[] = [
+  {
+    title: "WhatsApp AI Receptionist",
+    outcome: "Clinics stop losing after-hours bookings — the agent books them 24/7.",
+    description:
+      "An AI receptionist on WhatsApp that answers patient questions strictly from the clinic's knowledge base and books appointments end-to-end against real-time Google Sheets availability. Built on Google ADK with tool calling, a double-booking guardrail, an optional human-approval mode, and full trace/span observability.",
+    tech: [
+      "Google ADK",
+      "OpenAI GPT-4o-mini",
+      "LiteLLM",
+      "FastAPI",
+      "WhatsApp Cloud API",
+      "Google Sheets",
+      "Docker",
+      "Render",
+    ],
+    github: "https://github.com/Shahzain-Ali/whatsapp-ai-receptionist",
+    live: null,
+  },
   {
     title: "FTE AI Employee",
+    outcome: "One autonomous agent covering work a full-time assistant would do.",
     description:
-      "An autonomous AI agent that manages personal and business affairs 24/7. Reads Gmail, monitors WhatsApp, posts on social media (Facebook, Instagram, Twitter/X, LinkedIn), creates invoices in Odoo, and generates weekly CEO Briefings — all with human-in-the-loop approval.",
+      "An autonomous AI employee that manages email, social media (Facebook, Instagram, X, LinkedIn), and accounting workflows 24/7 — architected with 7 MCP servers exposing 31 tools and 17 agent skills, with human-in-the-loop approval for every sensitive action.",
     tech: [
       "Python",
       "Claude Code",
@@ -15,15 +44,35 @@ const projects = [
       "Odoo 17",
       "PostgreSQL",
       "Playwright",
-      "API Integration",
+      "Docker",
     ],
     github: "https://github.com/Shahzain-Ali/ai-employee-fte-system",
-    live: "#",
+    live: null,
+  },
+  {
+    title: "AI Tutor — Agentive Solutions Book",
+    outcome: "Readers get grounded, cited answers instead of hunting through chapters.",
+    description:
+      "A live AI tutor embedded in a multi-book learning platform. Agentic RAG: retrieval is a tool the agent calls only when needed, so answers stay grounded in the book with relevance-filtered citations. Bilingual replies, per-IP rate limiting, budget caps, and chat history in Postgres.",
+    tech: [
+      "OpenAI Agents SDK",
+      "GPT-4o-mini",
+      "text-embedding-3-small",
+      "Qdrant Cloud",
+      "FastAPI",
+      "Docusaurus",
+      "Neon Postgres",
+      "GitHub Actions",
+    ],
+    github: "https://github.com/Shahzain-Ali/agentive-solutions-book",
+    live: "https://shahzain-ali.github.io/agentive-solutions-book/",
+    liveLabel: "Try the AI Tutor",
   },
   {
     title: "AutoInvoice AI",
+    outcome: "Invoice creation drops from ~15 minutes of manual work to under a minute.",
     description:
-      "Agentic invoice automation pipeline with 3 specialized AI agents (Validation → Template → Delivery). Pulls data from forms, Google Sheets, or Excel, generates PDF invoices, and emails them to clients — all in seconds.",
+      "An agentic invoice pipeline with 3 specialized agents (Validation → Template → Delivery). Pulls client data from web forms, Google Sheets, or Excel, generates a PDF invoice, and emails it — end-to-end in under 60 seconds with zero manual steps.",
     tech: [
       "Python",
       "FastAPI",
@@ -35,17 +84,17 @@ const projects = [
       "pdfkit",
     ],
     github: "https://github.com/Shahzain-Ali/agentic-invoice-generator",
-    live: "#",
+    live: null,
   },
   {
     title: "Agentic Todo Evolution",
+    outcome: "Shows the same product rebuilt three ways — console, web, then agent.",
     description:
-      "Full-stack todo app evolving through 3 phases: Console → Web App → AI Chatbot. Phase 3 adds an AI-powered chatbot using MCP Protocol for natural language task management.",
+      "A full-stack task manager evolving through 3 phases: Console → Web App → AI Chatbot. Phase 3 adds an AI assistant using the MCP protocol for natural-language task management, with auth and a modern UI.",
     tech: [
       "Python",
       "FastAPI",
       "Next.js",
-      "React",
       "TypeScript",
       "PostgreSQL",
       "OpenAI Agents SDK",
@@ -53,12 +102,13 @@ const projects = [
       "ChatKit",
     ],
     github: "https://github.com/Shahzain-Ali/agentic-todo-evolution",
-    live: "#",
+    live: null,
   },
   {
     title: "FurniStore E-Commerce",
+    outcome: "A production storefront: catalog, payments, auth, and shipping.",
     description:
-      "Modern furniture e-commerce platform with product management, payments, authentication, shipping, and internationalization.",
+      "Modern furniture e-commerce platform with product management via headless CMS, Stripe payments, authentication, shipping rates, and internationalization.",
     tech: [
       "Next.js 15",
       "Sanity CMS",
@@ -69,24 +119,7 @@ const projects = [
       "next-intl",
     ],
     github: "https://github.com/Shahzain-Ali/furnistore-ecommerce-nextjs",
-    live: "#",
-  },
-  {
-    title: "Physical AI Course Book",
-    description:
-      "Interactive Docusaurus-based course book covering Physical AI & Humanoid Robotics with a built-in RAG AI chatbot. Users can ask questions and get instant, cited answers from the book content. Features floating chat widget, text selection Ask AI, and source citations.",
-    tech: [
-      "Docusaurus",
-      "React",
-      "FastAPI",
-      "OpenAI Agents SDK",
-      "GPT-4o-mini",
-      "Qdrant Cloud",
-      "Neon Postgres",
-    ],
-    github:
-      "https://github.com/Shahzain-Ali/physical-ai-humanoid-robotics-course",
-    live: "https://shahzain-ali.github.io/physical-ai-humanoid-robotics-course/",
+    live: null,
   },
 ];
 
@@ -103,9 +136,12 @@ const Portfolio = () => {
             className="bg-[#1f1e1e] rounded-lg p-5 flex flex-col justify-between transition-transform duration-[0.2s] hover:-translate-y-2 hover:shadow-secondary"
           >
             <div>
-              <h2 className="text-gray-200 text-[1.1rem] font-semibold mb-2">
+              <h2 className="text-gray-200 text-[1.1rem] font-semibold mb-1">
                 {project.title}
               </h2>
+              <p className="text-[#FD6F00] text-[12px] leading-snug mb-3">
+                {project.outcome}
+              </p>
               <p className="text-gray-400 text-[13px] leading-relaxed mb-4">
                 {project.description}
               </p>
@@ -121,20 +157,23 @@ const Portfolio = () => {
               </div>
             </div>
             <div className="flex gap-3 mt-auto">
-              <Link
-                href={project.github}
-                target="_blank"
-                className="inline-flex items-center gap-1 text-[12px] text-gray-300 border border-gray-500 px-3 py-1 rounded-md hover:bg-gray-700 hover:text-gray-50 transition-colors"
-              >
-                <i className="fab fa-github"></i> GitHub
-              </Link>
+              {project.github && (
+                <Link
+                  href={project.github}
+                  target="_blank"
+                  className="inline-flex items-center gap-1 text-[12px] text-gray-300 border border-gray-500 px-3 py-1 rounded-md hover:bg-gray-700 hover:text-gray-50 transition-colors"
+                >
+                  <i className="fab fa-github"></i> GitHub
+                </Link>
+              )}
               {project.live && (
                 <Link
                   href={project.live}
                   target="_blank"
                   className="inline-flex items-center gap-1 text-[12px] text-gray-300 bg-[#E46400] px-3 py-1 rounded-md hover:bg-[#c9492c] hover:text-gray-50 transition-colors"
                 >
-                  <i className="fas fa-external-link-alt"></i> Live Demo
+                  <i className="fas fa-external-link-alt"></i>{" "}
+                  {project.liveLabel ?? "Live Demo"}
                 </Link>
               )}
             </div>

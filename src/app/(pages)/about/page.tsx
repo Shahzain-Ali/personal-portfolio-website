@@ -24,16 +24,17 @@ const About = () => {
             <p className="text-gray-300 text-justify text-sm md:text-sm lg:text-base" >
               I&apos;m Shahzain Ali, an AI Automation Developer from Pakistan. While
               most developers build apps, I build digital employees — autonomous
-              AI agents that think, plan, and execute business tasks 24/7.
-              I&apos;ve helped clients automate their business operations and
-              built production-grade AI systems from scratch — autonomous digital
-              employees, invoice automation pipelines, and intelligent chatbots
-              — saving businesses 20+ hours of manual work every week. My systems
-              handle Gmail, WhatsApp, accounting, and content publishing — all
-              running on autopilot with human approval when it matters. I specialize in Python, OpenAI Agent SDK, MCP
-              Servers, n8n, FastAPI, and Next.js. Whether you need a custom AI
-              agent, a workflow automation, or an intelligent chatbot — I build
-              systems that work while you sleep.
+              AI agents that think, plan, and execute business tasks 24/7. I&apos;ve
+              shipped an AI receptionist that books appointments end-to-end on
+              WhatsApp, an autonomous AI Employee running on 7 MCP servers with
+              31 tools, an agentic RAG tutor that answers only from source
+              material with citations, and an invoice pipeline that goes from raw
+              data to a delivered PDF in under a minute. Every system is built
+              the same way: real tools, real deployment, and human approval where
+              it matters. I work with Python, Google ADK, the OpenAI Agents SDK,
+              MCP servers, RAG with vector databases, n8n, FastAPI, and Docker.
+              Whether you need a custom AI agent, a workflow automation, or an
+              intelligent chatbot — I build systems that work while you sleep.
             </p>
 
             {/* Download CV Button */}

@@ -47,17 +47,17 @@ const Footer = () => {
             </Link>
           </li>
           <li className="border border-gray-500 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 flex items-center justify-center flex-shrink-0">
-            <Link href="https://www.youtube.com/@SolutionswithShahzain" target="_blank">
+            <Link href="https://www.youtube.com/@SolutionsWithShahzain" target="_blank">
               <FaYoutube className="text-[#FF0000]" size={18} />
             </Link>
           </li>
           <li className="border border-gray-500 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 flex items-center justify-center flex-shrink-0">
-            <Link href="">
+            <Link href="https://www.facebook.com/shahzainalibangash1" target="_blank">
               <FaFacebook className="text-[#1877F2]" size={18} />
             </Link>
           </li>
           <li className="border border-gray-500 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 flex items-center justify-center flex-shrink-0">
-            <Link href="">
+            <Link href="https://www.instagram.com/shahzainalibangash1" target="_blank">
               <FaInstagram className="text-[#E4405F]" size={18} />
             </Link>
           </li>
@@ -70,7 +70,7 @@ const Footer = () => {
             </div>
             <div>
                 <span className="fa-solid fa-phone mr-2 inline-block mt-1 text-[14px] customsm:text-[12px]"></span>
-                <span className="inline-block text-[14px] customsm:text-[12px]">+92 3035498918</span>
+                <span className="inline-block text-[14px] customsm:text-[12px]">+92 347 3890095</span>
             </div>
         </div>
         <div className='text-gray-300 w-[50%] smm:text-[11px] text-[12px] mx-auto text-center landscape:pb-4 '>

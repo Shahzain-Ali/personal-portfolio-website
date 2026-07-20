@@ -36,7 +36,7 @@ export default function Home() {
         <section id="section-1" className="w-[45%] md:w-[42%] lg:w-[48%] xl:w-[45%] sm:w-full custom:w-[50%] customsm:w-auto customsm:justify-center smm:text-center smm:w-auto md:text-left shrink-0 sm:text-center">
         <div className="pt-8 sm:leading-8 leading-[45px] customsm:leading-[50px]  customsm:mx-auto customsm:w-auto smm:mx-auto smm:w-auto ">
           <h3 className="text-[1.8rem] md:text-[2.2rem] lg:text-[2.2rem] smm:text-[25px] customsm:text-[25px] sm:text-[26px] text-gray-400 tracking-[0.8px]">
-            Hi,I am
+            Hi, I am
           </h3>
           <h2 className="text-[2.2rem] md:text-[2.6rem] lg:text-[2.6rem] sm:text-[30px] text-gray-300 tracking-[1.5px]">
             Shahzain Ali
@@ -74,10 +74,10 @@ export default function Home() {
           <Link href="https://www.youtube.com/@SolutionsWithShahzain" target="_blank" className="border border-gray-600 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-9 h-9 flex items-center justify-center">
             <FaYoutube className="text-[#FF0000]" size={20} />
           </Link>
-          <Link href="" className="border border-gray-600 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-9 h-9 flex items-center justify-center">
+          <Link href="https://www.facebook.com/shahzainalibangash1" target="_blank" className="border border-gray-600 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-9 h-9 flex items-center justify-center">
             <FaFacebook className="text-[#1877F2]" size={20} />
           </Link>
-          <Link href="" className="border border-gray-600 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-9 h-9 flex items-center justify-center">
+          <Link href="https://www.instagram.com/shahzainalibangash1" target="_blank" className="border border-gray-600 cursor-pointer hover:shadow-primary hover:scale-110 transition-all duration-300 rounded-full w-9 h-9 flex items-center justify-center">
             <FaInstagram className="text-[#E4405F]" size={20} />
           </Link>
         </ul>

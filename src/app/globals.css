@@ -5,10 +5,12 @@
 :root {
   --background: #2b2929;  /* Dark color */
   --foreground: #171717;  /* Text color */
+  color-scheme: dark;     /* native controls (select, scrollbars, date pickers) render dark */
 }
 
 html {
-  overflow-x: hidden;
+  /* overflow-x mask removed: the real cause was landscape:w-screen (100vw
+     includes the scrollbar). Fixed at source in page.tsx. */
 }
 
 body {
@@ -17,29 +19,24 @@ body {
   margin: 0;  /* Remove default margin */
   background-color: rgb(15, 14, 14);  /* Set dark background color */
   font-family: sans-serif;  /* Set font */
-  overflow-x: hidden;
 }
 
 
 #service-sec{
- 
+
 }
 #about-sec{
-  
+
 }
 #contact-sec{
   height: auto;
-  /* background: linear-gradient(
-    to top right, 
-    rgb(17, 17, 17) 70%, 
-    #343333 100% 
-    ); */
-
 }
+/* Base is height:auto so screens wider than 1440px are covered too
+   (the old base was a fixed 35vh and the only override stopped at 1440px). */
 #footer-sec{
-  height: 35vh;
+  height: auto;
+  margin-top: 150px;
   background-color: #2b2929;
-  /* border: 2px solid white; */
 }
 @media (orientation: landscape) and (min-width: 200px) and (max-width: 480px) {
   #footer-sec {
@@ -47,11 +44,16 @@ body {
       margin-top: 150px;
   }
 }
-@media (min-width: 200px) and (max-width: 1440px) {
-  #footer-sec {
-      height: auto;
-      margin-top: 150px;
+
+/* Respect the OS "reduce motion" setting: kill the looping typewriter,
+   hover lifts and transitions for users who ask for less animation. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
-
-

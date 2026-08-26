@@ -6,11 +6,10 @@ const Sidebar = () => {
   const sidenavRef = useRef<HTMLDivElement>(null);
 
   const menuItems = [
-    { name: "Home", link: "/" },
+    { name: "Work", link: "#portfolio-sec" },
     { name: "Services", link: "#service-sec" },
-    { name: "About me", link: "#about-sec" },
-    { name: "Contact me", link: "#contact-sec" },
-    { name: "Portfolio", link: "#portfolio-sec" },
+    { name: "About", link: "#about-sec" },
+    { name: "Contact", link: "#contact-sec" },
   ];
 
   const toggleMenu = (e: React.MouseEvent) => {
@@ -48,17 +47,17 @@ const Sidebar = () => {
   }, [isMenuOpen]);
 
   return (
-    <div className="lg:hidden md:hidden sm:block smm:block customsm:block">
+    <div className="lg:hidden md:hidden xl:hidden 2xl:hidden sm:block smm:block customsm:block">
       <div
         ref={hamburgerRef}
         className="relative flex items-center justify-center w-10 h-8 cursor-pointer z-50"
         onClick={toggleMenu}
       >
         <div
-          className={`w-[30px] h-[3px] bg-white rounded-md relative transition-all duration-500 ease-in-out
+          className={`w-[30px] h-[3px] bg-white rounded-md relative transition-[transform,background-color] duration-500 ease-in-out
             ${isMenuOpen ? ' bg-transparent before:rotate-45 before:translate-x-[5px] before:translate-y-[5px] after:-rotate-45 after:translate-x-[5px] after:-translate-y-[5px]' : ''}
-            before:content-[''] before:absolute before:w-[30px] before:h-[3px] before:bg-white before:rounded-md before:transition-all before:duration-500 before:ease-in-out before:-translate-y-[10px]
-            after:content-[''] after:absolute after:w-[30px] after:h-[3px] after:bg-white after:rounded-md after:transition-all after:duration-500 after:ease-in-out after:translate-y-[10px]
+            before:content-[''] before:absolute before:w-[30px] before:h-[3px] before:bg-white before:rounded-md before:transition-transform before:duration-500 before:ease-in-out before:-translate-y-[10px]
+            after:content-[''] after:absolute after:w-[30px] after:h-[3px] after:bg-white after:rounded-md after:transition-transform after:duration-500 after:ease-in-out after:translate-y-[10px]
           `}
         />
       </div>
@@ -67,8 +66,8 @@ const Sidebar = () => {
         ref={sidenavRef}
         className={`
           fixed top-0 left-0 h-screen bg-gradient-to-b from-[rgba(46,46,46,0.7)] to-[rgba(128,0,32,0.7)]
-          transition-all duration-300 ease-in-out overflow-hidden z-40
-          ${isMenuOpen ? 'sm:w-[180px] md:hidden lg:hidden customsm:w-[160px] smm:w-[180px]' : 'w-0'}
+          transition-[width] duration-300 ease-in-out overflow-hidden z-40
+          ${isMenuOpen ? 'sm:w-[180px] md:hidden lg:hidden xl:hidden 2xl:hidden customsm:w-[160px] smm:w-[180px]' : 'w-0'}
         `}
       >
         <ul className="list-none p-0 m-0 flex flex-col justify-center customsm:justify-normal customsm:pt-12 smm:justify-normal smm:pt-12 h-full">

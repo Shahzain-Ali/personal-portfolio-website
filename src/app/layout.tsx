@@ -1,10 +1,6 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Services from "./(pages)/services/page";
-import About from "./(pages)/about/page";
-import Contact from "./(pages)/contact/page";
-import Portfolio from "./(pages)/portfolio/page";
 import Footer from "./components/Footer";
 
 
@@ -19,9 +15,38 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const SITE_URL = "https://shahzainaliportfolio-website-vert.vercel.app";
+const DESCRIPTION =
+  "I build digital employees — AI agents and automation systems that take repetitive work off people's desks. Python, Google ADK, OpenAI Agents SDK, MCP servers, RAG with Qdrant, n8n, FastAPI and Docker.";
+
 export const metadata: Metadata = {
-  title: "Shahzain Ali — AI Automation Developer",
-  description: "I build intelligent AI agents and automation systems that help businesses save time and scale faster. Specializing in Python, OpenAI Agent SDK, MCP Servers, n8n, and FastAPI.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Shahzain Ali — AI Automation Developer",
+    template: "%s — Shahzain Ali",
+  },
+  description: DESCRIPTION,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: "Shahzain Ali",
+    title: "Shahzain Ali — AI Automation Developer",
+    description: DESCRIPTION,
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Shahzain Ali — AI Automation Developer" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shahzain Ali — AI Automation Developer",
+    description: DESCRIPTION,
+    images: ["/og.png"],
+  },
+};
+
+// Matches the browser/OS chrome (mobile address bar, PWA surface) to the page background.
+export const viewport: Viewport = {
+  themeColor: "#0f0e0e",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({
@@ -31,17 +56,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
-        <Services/>
-        <Portfolio/>
-        <About/>
-        <Contact/>
         <Footer/>
       </body>
-      
     </html>
   );
 }

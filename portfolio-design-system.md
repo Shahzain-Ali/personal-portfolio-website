@@ -4,6 +4,11 @@
 
 **Two parts:** what the system *is* right now, and where it breaks the design fundamentals it should be holding to. The second part is the useful half.
 
+> **Status, 2026-09-06.** Findings A, B and C are fixed in commit `3580799`.
+> The audit text below is kept as written — it records the state that
+> prompted the work and the reasoning behind each fix. Where a finding has
+> been resolved, a **Resolved** note says what shipped.
+
 ---
 
 # PART 1 — What ships today
@@ -20,6 +25,11 @@
 `layout.tsx` loads both Geist faces and puts their variable classes on `<body>`. Those classes only *define* `--font-geist-sans` and `--font-geist-mono`. Nothing ever consumes them: there is no `fontFamily` entry in `tailwind.config.ts`, and no `font-[family-name:var(--font-geist-sans)]` anywhere in the tree. Meanwhile `globals.css` hardcodes `body { font-family: sans-serif; }`.
 
 **The site has no typeface.** It renders in whatever the visitor's browser defaults to — Arial on most Windows machines, Helvetica on most Macs. Two font files are fetched on every page load and thrown away.
+
+> **Resolved (2026-09-06).** Geist Sans and Geist Mono are now wired: a
+> `fontFamily` entry maps `font-sans` and `font-mono` onto the two CSS
+> variables, and the `font-family: sans-serif` line is gone from
+> `globals.css`. The 134 KB is now paid for something the visitor sees.
 
 ### Type scale as shipped
 
@@ -147,6 +157,26 @@ fontFamily: {
 
 and delete `font-family: sans-serif` from `globals.css` — or drop the two `.woff` files and stop paying for them. **Doing neither is the only wrong answer**, and it is what ships today.
 
+> **Resolved (2026-09-06) — Geist, wired properly.** This is the first
+> option above, taken exactly as written.
+>
+> The route here is worth recording. The first attempt replaced Geist with
+> IBM Plex Sans + IBM Plex Mono, on the reasoning in the paragraph below.
+> That shipped, then Shahzain asked to go back to Geist — believing Geist
+> was what the site had always rendered in. It was not: the audit above is
+> the proof that the site had been drawing in Arial the whole time, so the
+> face he liked was the browser default, not Geist.
+>
+> Told that, he chose Geist anyway, having now seen it wired. That is a
+> decision made with the facts in hand, which is the only kind worth
+> locking. The caveat in the next paragraph stands and was not withdrawn —
+> Geist still will not read as a deliberate choice to anyone who knows
+> Next.js. It is accepted, not solved. If the site ever needs to look less
+> templated, typography is the cheapest lever left.
+>
+> `display: "swap"` was added to both faces at the same time; the original
+> `localFont` calls had no display strategy.
+
 Worth considering before wiring: Geist is a competent neutral, but it is also the default a Next.js project arrives with — it will not read as a choice. A deliberate pairing (a characterful display face for headings, a quiet body face, Geist Mono kept for code and data) is where this site would gain the most visual identity for the least work. Mono is genuinely earned here — the subject is agents, traces and tool calls.
 
 ## B. Forty-one colours where nine would do
@@ -175,9 +205,21 @@ Status colours need defined meanings rather than four unexplained reds: `#4ADE80
 
 The neutrals should also be *chosen*, not inherited. `#0F0E0E` and `#1F1E1E` are pure greys. Biasing them a few points warm — toward the orange — makes the palette read as one system instead of "grey plus an accent". That is a real refinement, not a repaint.
 
+> **Resolved (2026-09-06).** Shipped as fifteen tokens in `globals.css`,
+> mapped in `tailwind.config.ts`: `ground surface surface-inset line ink
+> muted dim faint accent accent-hover accent-dim accent-line ok warn`.
+> Two names differ from the proposal above — `surface-inset` for
+> `surface-2` and `line`/`ink` for `border`/`text` — because they read
+> better at the call site. New sections use tokens, never raw hex.
+>
+> **Still open:** the warm-bias refinement in the paragraph above was not
+> done. The neutrals shipped as pure greys.
+
 ## C. `--foreground: #171717` is a live hazard
 
 Near-black text declared on a near-black ground. Nothing is broken today only because every text element overrides it. The first element that forgets renders invisible, and it will be invisible in a way that reviews clean in code. **Fix now, not later** — point the variables at the real values.
+
+> **Resolved (2026-09-06).** Fixed in `globals.css` in the same pass.
 
 ## D. Twenty-three type sizes, no scale
 

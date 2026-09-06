@@ -125,9 +125,12 @@ const projects: Project[] = [
       "Docusaurus",
       "GitHub Actions",
     ],
-    image: null,
-    imageAlt: "The tutor answering a question with a citation back to the chapter",
-    panelLabel: "Example conversation",
+    image: "/images/projects/ai-tutor-citation.jpg",
+    imageAlt:
+      "The Course Assistant answering “What does ‘Augmented’ mean in RAG?” with a Sources list linking back to lesson-01.md",
+    imageNote:
+      "A live answer from the deployed tutor. The Sources list under every reply is the retrieval being shown, not claimed.",
+    panelLabel: "A cited answer, traced back to the lesson",
     videoId: null,
     caseStudy: null,
     github: "https://github.com/Shahzain-Ali/agentive-solutions-book",

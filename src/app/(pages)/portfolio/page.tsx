@@ -95,9 +95,12 @@ const projects: Project[] = [
       "Docker",
       "Render",
     ],
-    image: null,
-    imageAlt: "A WhatsApp conversation ending in a confirmed booking",
-    panelLabel: "Example conversation",
+    image: "/images/projects/whatsapp-booking.jpg",
+    imageAlt:
+      "A WhatsApp booking: the agent confirms the details, sends them for owner approval, reports the confirmation, then refuses a second booking for the same patient",
+    imageNote:
+      "CityCare Clinic is a worked example. Runs on a WhatsApp Cloud API test number, so it only messages verified recipients.",
+    panelLabel: "Approval, then the duplicate-booking guardrail",
     videoId: null,
     caseStudy: "/projects/whatsapp-ai-receptionist",
     primaryIsCaseStudy: true,

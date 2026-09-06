@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -38,6 +39,38 @@ const Heading = ({ n, children }: { n: string; children: React.ReactNode }) => (
 
 const Body = ({ children }: { children: React.ReactNode }) => (
   <p className="text-[15px] leading-[1.75] text-[#b4b3b3] m-0">{children}</p>
+);
+
+/* A real screenshot, labelled as what it is. Never a fabricated capture.
+   Written against the design tokens -- the rest of this file still uses raw
+   hex and is due a conversion pass. */
+const Shot = ({
+  src,
+  alt,
+  label,
+  note,
+}: {
+  src: string;
+  alt: string;
+  label: string;
+  note?: string;
+}) => (
+  <figure className="m-0">
+    <p className="font-mono text-label uppercase text-dim mb-2 m-0">{label}</p>
+    <div className="bg-surface-inset border border-line rounded-lg overflow-hidden">
+      <Image
+        src={src}
+        alt={alt}
+        width={1600}
+        height={1200}
+        className="w-full h-auto block"
+        sizes="(max-width: 768px) 100vw, 900px"
+      />
+    </div>
+    {note && (
+      <figcaption className="text-small leading-relaxed text-dim mt-2">{note}</figcaption>
+    )}
+  </figure>
 );
 
 const CaseStudy = () => {
@@ -263,9 +296,29 @@ const CaseStudy = () => {
             </div>
           </section>
 
+          {/* the booking flow, end to end */}
+          <section>
+            <Shot
+              src="/images/projects/whatsapp-booking.jpg"
+              alt="A booking: the agent confirms the details, sends them to the owner for approval, reports back the confirmation, then refuses a second booking for the same patient and offers to change the existing one"
+              label="One booking, end to end — approval and the guardrail"
+              note="The approval round trip and the duplicate-booking block, in one conversation. The owner's YES arrives on their own number; the patient only ever sees the outcome."
+            />
+          </section>
+
           {/* 05 */}
           <section>
             <Heading n="05">What it does now</Heading>
+
+            <div className="mb-6">
+              <Shot
+                src="/images/projects/whatsapp-answers.jpg"
+                alt="The clinic assistant greeting a patient, then answering questions about timings and consultation fees with figures from the clinic profile"
+                label="Answers, straight from the clinic profile"
+                note="Timings and fees are read from the clinic's own profile — the agent has nothing else to answer from, which is what stops it improvising a price."
+              />
+            </div>
+
             <Body>
               A patient messages the clinic&apos;s number at any hour. The agent answers from the clinic profile,
               checks a real slot against the live sheet, offers the next open times if it&apos;s taken, and holds the

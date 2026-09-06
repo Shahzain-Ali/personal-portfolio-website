@@ -56,14 +56,14 @@ const Footer = () => {
           </li>
         </ul>
         </div>
-        <div className='text-gray-300 flex flex-col items-center gap-2 sm:flex-row sm:justify-center sm:gap-6 md:flex-row md:justify-center md:gap-6 lg:flex-row lg:justify-center lg:gap-6 border-b border-gray-300 w-full max-w-[360px] px-4 mx-auto pb-5'>
+        <div className='text-gray-300 flex flex-col items-center gap-2 sm:flex-row sm:justify-center sm:gap-6 md:flex-row md:justify-center md:gap-6 lg:flex-row lg:justify-center lg:gap-6 xl:flex-row xl:justify-center xl:gap-6 2xl:flex-row 2xl:justify-center 2xl:gap-6 border-b border-gray-300 w-full max-w-[360px] sm:max-w-[580px] md:max-w-[580px] lg:max-w-[580px] xl:max-w-[580px] 2xl:max-w-[580px] px-4 mx-auto pb-5'>
             <div className="flex items-center">
                 <span className="fa-solid fa-envelope inline-block text-[14px] customsm:text-[12px]"></span>
-                <span className="ml-2 text-[14px] customsm:text-[12px] ">enshahzainali110@gmail.com</span>
+                <span className="ml-2 whitespace-nowrap text-[14px] customsm:text-[12px] ">enshahzainali110@gmail.com</span>
             </div>
             <div className="flex items-center">
                 <span className="fa-solid fa-phone mr-2 inline-block text-[14px] customsm:text-[12px]"></span>
-                <span className="inline-block text-[14px] customsm:text-[12px]">+92 347 3890095</span>
+                <span className="inline-block whitespace-nowrap text-[14px] customsm:text-[12px]">+92 347 3890095</span>
             </div>
         </div>
         <div className='text-gray-300 w-[50%] smm:text-[11px] text-[12px] mx-auto text-center landscape:pb-4 '>

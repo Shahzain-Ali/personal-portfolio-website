@@ -27,9 +27,9 @@ const Teaching = () => {
           <Link
             href="https://shahzain-ali.github.io/agentive-solutions-book/"
             target="_blank"
-            className="inline-flex items-center gap-1.5 text-[12.5px] text-[#FD6F00] hover:text-[#E46400] transition-colors mt-auto w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD6F00] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f0e0e]"
+            className="inline-flex items-center justify-center gap-2 rounded-md px-5 min-h-[44px] text-[14px] font-semibold tracking-[0.01em] bg-accent hover:bg-accent-hover text-white transition-colors duration-200 mt-auto w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ground"
           >
-            Read it <i className="fas fa-arrow-right text-[10px]" aria-hidden="true"></i>
+            Read it <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
           </Link>
         </article>
 
@@ -47,9 +47,9 @@ const Teaching = () => {
           <Link
             href="https://www.youtube.com/@SolutionsWithShahzain"
             target="_blank"
-            className="inline-flex items-center gap-1.5 text-[12.5px] text-[#FD6F00] hover:text-[#E46400] transition-colors mt-auto w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD6F00] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f0e0e]"
+            className="inline-flex items-center justify-center gap-2 rounded-md px-5 min-h-[44px] text-[14px] font-semibold tracking-[0.01em] bg-accent hover:bg-accent-hover text-white transition-colors duration-200 mt-auto w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ground"
           >
-            Channel <i className="fas fa-arrow-right text-[10px]" aria-hidden="true"></i>
+            Channel <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
           </Link>
         </article>
       </section>

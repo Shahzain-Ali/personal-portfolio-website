@@ -2,10 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ---------------------------------------------------------------------------
+   Design tokens.
+
+   Nine colours do the work that forty-one were doing before. Every value here
+   was already somewhere in the codebase — this file just gives each one a name
+   and a single place to live, so a new section can't quietly invent a
+   twenty-third shade of near-black.
+   --------------------------------------------------------------------------- */
 :root {
-  --background: #2b2929;  /* Dark color */
-  --foreground: #171717;  /* Text color */
-  color-scheme: dark;     /* native controls (select, scrollbars, date pickers) render dark */
+  /* surfaces */
+  --ground: #0f0e0e;        /* the page itself */
+  --surface: #1f1e1e;       /* cards and panels */
+  --surface-inset: #141313; /* wells inside a card */
+  --line: #262525;          /* every hairline */
+
+  /* text */
+  --ink: #e5e7eb;           /* primary */
+  --muted: #9ca3af;         /* secondary */
+  --dim: #6b6a6a;           /* labels, captions */
+  --faint: #4a4848;         /* the quietest readable step */
+
+  /* accent — one bold thing, and a quieter member of the same family */
+  --accent: #fd6f00;
+  --accent-hover: #e46400;
+  --accent-dim: #c97f3e;    /* tech chips: same family, subordinate to the hook */
+  --accent-line: #3a2a18;   /* accent-tinted borders */
+
+  /* status — meanings, not decoration */
+  --ok: #4ade80;            /* deployed, live, running */
+  --warn: #fbbf24;          /* in progress */
+
+  /* Kept because older markup still reads them. They now point at the real
+     values: --foreground used to be #171717 — near-black text on a near-black
+     page. Nothing broke only because every element overrode it. */
+  --background: var(--ground);
+  --foreground: var(--ink);
+
+  color-scheme: dark;       /* native controls render dark */
 }
 
 html {
@@ -14,34 +48,31 @@ html {
 }
 
 body {
-  color: var(--foreground);  /* Set text color */
-  min-height: 100vh;  /* Minimum height, allows content to grow */
-  margin: 0;  /* Remove default margin */
-  background-color: rgb(15, 14, 14);  /* Set dark background color */
-  font-family: sans-serif;  /* Set font */
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background-color: var(--ground);
+  /* No font-family here. The typeface comes from Tailwind's font-sans, which
+     resolves to --font-geist-sans (set in layout.tsx). Hardcoding a family here
+     is what made the site render in the browser default for months. */
 }
 
-
-#service-sec{
-
-}
-#about-sec{
-
-}
-#contact-sec{
+#contact-sec {
   height: auto;
 }
+
 /* Base is height:auto so screens wider than 1440px are covered too
    (the old base was a fixed 35vh and the only override stopped at 1440px). */
-#footer-sec{
+#footer-sec {
   height: auto;
   margin-top: 150px;
   background-color: #2b2929;
 }
+
 @media (orientation: landscape) and (min-width: 200px) and (max-width: 480px) {
   #footer-sec {
-      height: 100px;
-      margin-top: 150px;
+    height: 100px;
+    margin-top: 150px;
   }
 }
 

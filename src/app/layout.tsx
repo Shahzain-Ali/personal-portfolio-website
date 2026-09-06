@@ -4,15 +4,27 @@ import "./globals.css";
 import Footer from "./components/Footer";
 
 
+/**
+ * Geist Sans for everything readable, Geist Mono for every label.
+ * Both are variable faces self-hosted from ./fonts via next/font/local, so
+ * there is no runtime request to a font CDN.
+ *
+ * These files shipped for months but never rendered: nothing mapped their CSS
+ * variables into Tailwind, and globals.css hardcoded `font-family: sans-serif`
+ * over the top. Both of those are fixed now -- do not reintroduce a
+ * font-family declaration in globals.css.
+ */
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
+  display: "swap",
 });
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+  display: "swap",
 });
 
 const SITE_URL = "https://shahzainaliportfolio-website-vert.vercel.app";
@@ -56,7 +68,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
         {children}
         <Footer/>
       </body>

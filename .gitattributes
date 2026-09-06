@@ -1,0 +1,12 @@
+# Keep line endings stable across editors. Without this, an editor that saves
+# CRLF turns every touched file into a whole-file diff and buries the real change.
+* text=auto eol=lf
+
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.ico  binary
+*.woff binary
+*.woff2 binary
+*.pdf  binary

@@ -20,7 +20,7 @@ const groups: Group[] = [
   },
   {
     title: "LLMs & PROMPTING",
-    items: ["GPT-4o-mini", "Gemini 2.5 Flash", "LiteLLM", "Function calling", "Structured output"],
+    items: ["GPT-5", "GPT-4o-mini", "Gemini 2.5 Flash", "LiteLLM", "Function calling", "Structured output"],
   },
   {
     title: "RETRIEVAL & VECTOR",
@@ -28,19 +28,19 @@ const groups: Group[] = [
   },
   {
     title: "AUTOMATION & INTEGRATION",
-    items: ["n8n", "WhatsApp Cloud API", "Instagram webhooks", "Google Sheets API", "Webhooks"],
+    items: ["n8n", "WhatsApp Cloud API", "Instagram webhooks", "Google Sheets API", "Slack", "Webhooks"],
   },
   {
     title: "BACKEND & DATA",
-    items: ["Python", "FastAPI", "PostgreSQL", "Neon", "Pydantic"],
+    items: ["Python", "FastAPI", "PostgreSQL", "Supabase", "Neon", "Pydantic"],
   },
   {
     title: "OBSERVABILITY & SAFETY",
-    items: ["ADK traces & spans", "Human-in-the-loop approval", "Rate limiting", "Budget caps"],
+    items: ["ADK traces & spans", "Human-in-the-loop approval", "HMAC webhook verification", "Rate limiting", "Budget caps"],
   },
   {
     title: "DEPLOYMENT & DEVOPS",
-    items: ["Docker", "GitHub Actions", "Render", "Vercel", "Hugging Face Spaces"],
+    items: ["Docker", "GitHub Actions", "Oracle Cloud", "Caddy + Let's Encrypt", "Render", "Vercel", "Hugging Face Spaces"],
   },
   {
     title: "FRONTEND",
